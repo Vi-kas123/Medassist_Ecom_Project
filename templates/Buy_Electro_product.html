@@ -1,0 +1,78 @@
+<!doctype html>
+<head>
+
+      	<script src="/static/Electrouserinterface.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+         </script>
+    <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+
+  });
+
+</script>
+      	<script src="/static/Electrouserinterface.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Compiled and minified CSS -->
+
+     <!--Import Google Icon Font-->
+
+
+    <title>Continue Shopping</title>
+</head>
+
+<header>
+{% include 'AppBar1.html' %}
+</header>
+
+<body>
+<div class="container" style="padding: 40px;">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="/static/{{product.producticon }}" width="70%">
+        </div>
+        <div class="col-md-6">
+            <div style="font-family: Arial; font-size: 38px">{{product.productname }}</div>
+            <div>
+            <span style="margin: 10px 10px">{{product.cname }}</span><span style="margin: 10px 20px;">{{product.scname }}</span>
+            </div>
+            <div style="margin-top: 20px; margin-bottom: 30px">
+               <hr size="3" width="100%" color="black">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <span style="font-family: Arial; font-size: 23px;">Best Price: <u>₹{{product.offerprice }}</u></span>
+                <span style="color: black">MRP:<s>₹{{product.price }}</s></span>
+                <span style="color: black">(Inclusive of all taxes)</span>
+                    <ul>
+                        <li style="color: black">* This product cannot be returned for a refund or exchange.</li>
+                        <li style="color: black">* Mkt: {{product.bname }} Pvt. Ltd.</li>
+                        <li style="color: black">* Country of Origin: India.</li>
+                        <li style="color: black">* Delivery charges if applicable will be applied at checkout.</li>
+                    </ul>
+            </div>
+            <div>
+         <span id="qtycomponent">
+                <a  productid = "{{ product.productid}}" class="btn-floating btn-small waves-light minus" style="background: #151B54;" product ="{{ product }}"><i class="material-icons">remove</i></a>
+                <span id="qty">1</span>
+                <a product ="{{ product }}" class="btn-floating btn-small waves-light plus" style="background: #151B54;"><i class="material-icons">add</i></a>
+
+            </span>
+            <button class="btn wave-light wave-effect addtocart" style="margin-right: 10px;background: #151B54;color: white;" products="{{ product }}">Add To Cart</button>
+            <button class="btn wave-light wave-effect" style="margin-left: 10px;background: #151B54;color: white;">Buy Now</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% include 'Appfooter1.html' %}
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+

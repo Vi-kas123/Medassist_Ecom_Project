@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<link href="/static/electroproduct.css" rel="stylesheet">
+<html lang="en">
+<head>
+         <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <script src="/static/electroproductjson.js"></script>
+    <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="maincontainer">
+    <div class="box1" style="padding: 10px;">
+     <div class="boxheading">
+       <span style="width: 40%; display: flex; justify-content: flex-start; padding: 5px;"><a href="http://localhost:8000/electroproductinterface"><i class="material-icons" style="color: #FFFFFF; font-size: 24px;">add_box</i></a></span>
+      <span class="headingtext">Product List</span>
+     </div>
+        <table class="table">
+     <thead>
+     	<tr>
+     	  <th>Category</th>
+                 <th>SubCategory</th>
+                 <th>Brand</th>
+                 <th>Product Id</th>
+                 <th>Product Name</th>
+                 <th>Price</th>
+                 <th>Offer Prrice</th>
+                 <th>quantity</th>
+                 <th>Icon</th>
+                 <th>Update</th>
+     	</tr>
+     </thead>
+     <tbody>
+               {% for row in records %}
+            <tr><td data-label="Category">{{ row.cname }}/{{ row.categoryid }}</td>
+                <td data-label="Subcategory">{{ row.scname }}/{{ row.subcategoryid }}</td>
+                <td data-label="Brand">{{ row.bname }}/{{ row.brandid }}</td>
+                <td data-label="ProductId">{{ row.productid }}</td>
+                <td data-label="Product Name">{{ row.productname }}</td>
+                <td data-label="Price">{{ row.price }}</td>
+                <td data-label="Offer Price">{{ row.offerprice }}</td>
+                <td data-label="Quantity">{{ row.quantity }}</td>
+                <td data-label="Icon"><img src="/static/{{ row.producticon }}" width="40" class="imgbtn" categoryicon="{{ row.categoryicon }}" categoryid="{{ row.categoryid }}" producticon="{{ row.producticon }}" productid="{{ row.productid }}"/></td>
+                <td data-label="Update"><a class="waves-effect waves-light btn modal-trigger btn editdeletebtn"  cid="{{ row.categoryid }}" cname="{{ row.categoryname }}"  href="#modal1" pid="{{ row.productid }}" pname="{{ row.productname }}" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Edit/Delete</a></td></tr>
+                      {% endfor %}
+               </tbody>
+   </table>
+
+    </div>
+</div>
+
+<div id="modal1" class="modal" style="max-width: 900px;max-height: 100%;">
+    <div class="modal-content" style="max-width: 700px;max-height: 900px;">
+       <input type="hidden" id="productid">
+          <div class="box3">
+            <div class="boxheading">
+                <span class="headingtext">Product Interface</span>
+            </div>
+         <div>
+            <div class="row">
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">add_shopping_cart</i>
+                       <select id="categoryid" name="categoryid">
+                           <option value="" disabled selected>Choose your option</option>
+                       </select>
+                       <label>Select Category Id</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">add_shopping_cart</i>
+                       <select id="subcategoryid" name="subcategoryid">
+                           <option value="" disabled selected>Choose your option</option>
+                       </select>
+                       <label>Select SubCategory Id</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <i class="material-icons prefix">add_shopping_cart</i>
+                       <select id="brandid" name="brandid">
+                           <option value="" disabled selected>Choose your option</option>
+                       </select>
+                       <label>Select Brand Id</label>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:-20px;">
+                    <div class="input-field col s4">
+                         <i class="material-icons prefix">account_circle</i>
+                         <input id="productname" name="productname" type="text" class="validate">
+                         <label for="productname">Product Name</label>
+                    </div>
+                      <div class="input-field col s4">
+                          <select id="status" name="status">
+                              <option value="" disabled selected>Choose your option</option>
+                              <option >Top</option>
+                              <option >Trending</option>
+                              <option >Popular</option>
+                              <option>Discontinue</option>
+                          </select>
+                          <label>Status</label>
+                      </div>
+                     <div class="input-field col s4">
+                         <i class="material-icons prefix">account_circle</i>
+                         <input id="quantity" name="quantity" type="text" class="validate">
+                         <label for="quantity">Quantity</label>
+                    </div>
+
+                </div>
+
+                <div class="row" style="margin-top:-30px;">
+                    <div class="input-field col s6">
+                         <i class="material-icons prefix">account_circle</i>
+                         <input id="price" name="price" type="text" class="validate">
+                         <label for="price">Price</label>
+                    </div>
+                    <div class="input-field col s6">
+                         <i class="material-icons prefix">account_circle</i>
+                         <input id="offerprice" name="offerprice" type="text" class="validate">
+                         <label for="offerprice">Offer Price</label>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="input-field col s6">
+                          <select id="salestatus" name="salestatus">
+                              <option value="" disabled selected>Choose your option</option>
+                              <option >Continue</option>
+                              <option >Discontinue</option>
+
+                          </select>
+                          <label>Sales Status</label>
+                      </div>
+                    <div class="input-field col s6">
+                          <select id="rating" name="rating">
+                              <option value="" disabled selected>Choose your option</option>
+                              <option>*</option>
+                              <option>**</option>
+                              <option>***</option>
+                              <option>****</option>
+                              <option>*****</option>
+                          </select>
+                          <label>Rating</label>
+                      </div>
+
+                </div>
+
+
+           <div class="row">
+               <div class="col s6 btnrow">
+                   <button class="btn waves-effect waves-light btnstyle editsbtn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Edit
+                   <i class="material-icons right" >edit</i>
+                   </button>
+               </div>
+
+               <div class="col s6 btnrow">
+                   <button class="btn waves-effect waves-light btnstyle delsbtn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Remove
+                   <i class="material-icons right">delete</i>
+                   </button>
+               </div>
+           </div>
+
+        <div class="row">
+            <div class="col s12 btnrow">
+                 <span class="messagestyle"></span>
+            </div>
+        </div>
+       </div>
+       </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect btn-flat closebtn" style="margin-top: -50px;">Close</a>
+    </div>
+  </div>
+<div id="modal2" class="modal" style="width: 300px; height: auto; display: flex; justify-content: center;">
+    <div class="modal-content" >
+        <input type="hidden" id="iconcid"/>
+        <div style="padding: 10px;">
+            <span></span>
+          <img id="icon" width="200" height="auto">
+        </div>
+        <div style="padding: 10px;"><b>Select New Picture</b></div>
+        <div style="padding: 10px;">
+            <div class="file-field input-field">
+                       <div class="btn">
+                             <span>File</span>
+                             <input required type="file" id="newproducticon">
+                       </div>
+                       <div class="file-path-wrapper">
+                           <input class="file-path validate" type="text">
+                       </div>
+                   </div>
+            <button class="btn waves-effect waves-light iconbtn">Edit
+                   <i class="material-icons right" >edit</i>
+                   </button>
+            <a href="#!" class="modal-close waves-effect btn-flat closebtnicon">Close</a>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript"
+            src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#modal1').modal();
+    $('#modal2').modal();
+    $('#productname').val(' ');
+
+         $('.editdeletebtn').click(function(){
+<!--             $('categoryid').val($(this).attr('cname'))-->
+<!--             $('subcategoryid').val($(this).attr('sname'))-->
+<!--             alert($(this).attr('cname'))-->
+<!--             $('select').formSelect();-->
+            alert($(this).attr('cid'))
+            $('#categoryid').val($(this).attr('cid'))
+            $('#subcategoryid').val($(this).attr('scid'));
+             $('#productid').val($(this).attr('pid'));
+             $('#brandid').val($(this).attr('bid'))
+             $('#productname').val($(this).attr('pname'));
+
+
+
+            $('select').formSelect();
+         })
+
+         $('.editsbtn').click(function(){
+<!--                     alert($('#categoryid').val())-->
+
+       $.getJSON('http://localhost:8000/editelectroproduct',{productid:$('#productid').val(),brandid:$('#brandid').val(),subcategoryid:$('#subcategoryid').val(),categoryid:$('#categoryid').val(),productname:$('#productname').val(),price:$('#price').val(),offerprice:$('#offerprice').val(),rating:$('#rating').val(),packing:$('#packing').val(),quantity:$('#quantity').val(),status:$('#status').val(),salestatus:$('#salestatus').val()},function(data){
+          if(data.result)
+          {
+               $('.messagestyle').html("Product update Successfully...");
+           }
+          else
+          {
+               $('.messagestyle').html("Fail to update Product...");
+           }
+       })
+
+    })
+
+
+
+         $('.delsbtn').click(function(){
+        $.getJSON('http://localhost:8000/deleteelectroproduct',{productid:$('#productid').val()},function(data){
+      if(data.result)
+     {
+        $('.messagestyle').html("Product deleted Successfully..")
+      }
+      else
+     {
+        $('.messagestyle').html("Fail to delete Product")
+     }
+
+         })
+    })
+
+    $('.closebtn').click(function(){
+<!--     alert('zzz');-->
+         $('#modal2').modal('close');
+         window.location.reload('http://localhost:8000/displayallelectroproducts');
+    })
+
+    $('.imgbtn').click(function(){
+      $('#modal2').modal('open')
+<!--      alert($(this).attr('categoryid'))-->
+      $('#iconcid').val($(this).attr('productid'))
+      $('#icon').attr('src',`/static/${$(this).attr('producticon')}`)
+   })
+    })
+
+     $('.closebtnicon').click(function(){
+<!--         alert('zzz');-->
+         $('#modal2').modal('close');
+         window.location.reload('http://localhost:8000/displayallelectroproducts');
+    })
+
+$('.iconbtn').click(function(){
+<!--       alert($('#iconcid').val())-->
+        var formData=new FormData()
+        formData.append('productid',$('#iconcid').val())
+        var file=$('#newproducticon')[0].files
+        if(file.length>0)
+             formData.append('producticon',file[0])
+
+        $.ajax({
+                url:'editelectroproducticon',
+                headers:{
+                  'X-CSRFToken':'{{ csrf_token }}'
+                },
+                type: 'post',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(response){
+                       if(response !=0 ){
+                           alert(true)
+                       }
+                       else{
+                          alert(false)
+                       }
+                }
+        })
+
+})
+</script>
+<script>
+         $(document).ready(function(){
+          $('select').formSelect();
+        });
+    </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="/static/style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <title>DashBoard</title>
+ </head>
+ <body>
+   <nav class="navbar">
+     <div class="logo"></div>
+     <ul class="nav-links">
+
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <div class="menu">
+         <li><a href="http://localhost:8000/displayallcategories" target="mw">Category</a></li>
+         <li><a href="http://localhost:8000/displayallsubcategories" target="mw">Subcategory</a></li>
+         <li><a href="http://localhost:8000/displayallbrands" target="mw">Brands</a></li>
+         <li><a href="http://localhost:8000/displayallelectroproducts" target="mw">Products</a></li>
+         <li>{{ AdminData.name}}</li>
+          <li><img src="/static/{{ AdminData.picture }}" style="width: 4vw;margin: 4px;" class="circle"></li>
+       </div>
+     </ul>
+   </nav>
+ <ul class="sidenav" id="mobile-demo">
+    <li><a href="http://localhost:8000/displayallcategories" target="mw">Category</a></li>
+        <li><a href="http://localhost:8000/displayallsubcategories" target="mw">Subcategory</a></li>
+        <li><a href="http://localhost:8000/displayallbrands" target="mw">Brand</a></li>
+        <li><a href="http://localhost:8000/displayallproducts" target="mw">Product</a></li>
+         <li><a href="http://localhost:8000/adminlogout" target="_blank">Logout</a></li>
+
+  </ul>
+ <div>
+    <iframe name="mw" height="700vh" width="100%" frameborder="0" style="margin-top: 0;"></iframe>
+</div>
+</body>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</html>

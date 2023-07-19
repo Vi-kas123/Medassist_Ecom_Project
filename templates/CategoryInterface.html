@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<link href="/static/category.css" rel="stylesheet">
+<html lang="en">
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Category Interface</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form action="/submitcategory" method="post" enctype="multipart/form-data">{% csrf_token %}
+<div class="maincontainer">
+       <div class="box">
+            <div class="boxheading" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">
+                <span class="headingtextinterface">Category Interface</span>
+                <span style="width: 65%; display: flex; justify-content: flex-end; padding: 5px;"><a href="http://localhost:8000/displayallcategories"><i class="material-icons" style="color: #FFFFFF; font-size: 24px;">toc</i></a></span>
+            </div>
+         <div>
+            <div class="row">
+                <div class="input-field col s12">
+                     <i class="material-icons prefix">account_circle</i>
+                     <input id="categoryname" name="categoryname" type="text" class="validate">
+                     <label for="categoryname">Category Name</label>
+                </div>
+            </div>
+
+           <div class="row">
+               <div class="input-field col s12">
+                   <div class="file-field input-field">
+                       <div class="btn" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">
+                             <span>File</span>
+                             <input type="file" name="categoryicon" >
+                       </div>
+                       <div class="file-path-wrapper">
+                           <input class="file-path validate" type="text">
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="row">
+               <div class="col s6 btnrow">
+                   <button class="btn waves-effect waves-light btnstyle" type="submit" name="action" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Submit
+                   <i class="material-icons right">send</i>
+                   </button>
+               </div>
+
+               <div class="col s6 btnrow">
+                   <button class="btn waves-effect waves-light btnstyle" type="reset" name="action" style="background: linear-gradient(-135deg, #c850c0, #4158d0);">Reset
+                   <i class="material-icons right">delete</i>
+                   </button>
+               </div>
+           </div>
+
+        <div class="row">
+            <div class="col s12 btnrow">
+                 <span class="messagestyle">{{message}}</span>
+            </div>
+        </div>
+       </div>
+</div>
+</form>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/static/category.css" rel="stylesheet">
+    </html>

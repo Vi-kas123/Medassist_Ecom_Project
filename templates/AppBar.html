@@ -1,0 +1,86 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+
+  });
+   window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted ||
+                         ( typeof window.performance != "undefined" &&
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});
+</script>
+<style>
+<!--    #shoppingcart:hover{-->
+<!--     color: white;-->
+<!--}-->
+<!--.an:hover{-->
+<!--     font-color: white;-->
+<!--}-->
+<!--a:focus {-->
+<!--  color: #40a97b;-->
+<!--}-->
+</style>
+    	<script src="/static/userinterface.js"></script>
+<meta charset="UTF-8">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+<link href="/static/category.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav>
+    <div class="nav-wrapper" style="background-color: #151B54;">
+      <a href="#!" class="brand-logo" style="text-decoration: none;"><span style="color: #fedcba;font-size: larger;font-weight: bold;margin-left: 5px;">Med-Assist</span></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <span class="input-field" style="margin-left: 400px">
+
+
+          <input style="width:500px" placeholder="Search Your Medicine Here...." type="text" id="autocomplete-input" class="autocomplete">
+
+
+
+          </span>
+
+        <span class="right">
+          <a href="/my_shopping_cart" style="text-decoration: none !important;" text="white" link="white" class="an"><span style="font-size: 13px;color: white;" id="shoppingcart" class="an">(0 Articals) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></span>
+        <div class="right"><i class="material-icons">shopping_cart</i></div>
+        <ul class="right hide-on-med-and-down mainmenu1">
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav mainmenu" id="mobile-demo">
+
+  </ul>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+  })
+
+  });
+  </script>

@@ -1,0 +1,144 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+
+  .navbar{
+    background-color: #1192d8;
+    height: 80px;
+  }
+  .nav-link{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-color: #fedcba;
+    color: white;
+  }
+
+  @media(max-width: 600px){
+        .navbar-brand img{
+                   width: 100px;
+               }
+  }
+  .nav-link:hover{
+      background-color: white;
+      border-radius: 20px;
+      border: 1px solid black;
+  }
+  .navbar-nav li{
+       padding: 0 10px;
+  }
+<!--  .dropdown-item:hover{-->
+<!--       background-color: black;-->
+<!--       color: white;-->
+<!--       border-radius: 10px;-->
+<!--       border: 2px solid #1192d8;-->
+
+<!--  }-->
+<!--  .dropdown-item{-->
+<!--    font-weight: bold;-->
+<!--    color: #1192d8;-->
+<!--    font-size: 18px;-->
+<!--    font-family: "Lucida Console", Courier, monospace;-->
+<!--  }-->
+</style>
+<script>
+
+  $(document).ready(function(){
+<!--    $('.sidenav').sidenav();-->
+
+  });
+   window.addEventListener( "pageshow", function ( event ) {
+  var historyTraversal = event.persisted ||
+                         ( typeof window.performance != "undefined" &&
+                              window.performance.navigation.type === 2 );
+  if ( historyTraversal ) {
+    // Handle page restore.
+    window.location.reload();
+  }
+});</script>
+<meta charset="UTF-8">
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+<link href="/static/category.css" rel="stylesheet">
+<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+	<!-- Compiled and minified JavaScript -->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: #151B54;">
+  <div class="container-fluid">
+    <a href="" class="navbar-brand"><h3 style="color: #fedcba;">Electro-Cart</h3></a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#pn">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id=pn>
+    <ul class="navbar-nav ms-auto mainmenu">
+        <span class="right">   <a href="/my_shopping_cart" class="an navlink"><span style="font-size: 13px;" id="shoppingcart" class="an">(0 Articals) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></span>-->
+
+       <div class="right"><i class="material-icons">shopping_cart</i></div>
+
+<!--      <li><a href="index.html" class="nav-link active">Home</a></li>-->
+<!--      <li><a href="createaccount.html" class="nav-link active">Create Account</a></li>-->
+<!--      <li><a href="AboutUs.html" class="nav-link active">About Us</a></li>-->
+<!--      <li><a href="Brands.html" class="nav-link active">Brands</a></li>-->
+<!--      <li class="nav-item dropdown">-->
+<!--          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--            Sports-->
+<!--          </a>-->
+<!--          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--            <li><a class="dropdown-item" href="cricket.html">Cricket</a></li>-->
+<!--            <li><a class="dropdown-item" href="badminton.html">Badminton</a></li>-->
+<!--            <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>-->
+<!--            <li><a class="dropdown-item" href="football.html">Football</a></li>-->
+<!--            <li><a class="dropdown-item" href="hockey.html">Hockey</a></li>-->
+<!--          </ul>-->
+<!--        </li>-->
+
+      <!---modal button-->
+      <button type="button" class="btn btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#login" style="font-weight: bold;font-family: Lucida Console, Courier, monospace;">login</button>
+      <!--model button end--->
+    </ul>
+  </div><!--collapse end-->
+  </div><!--container-fluid-->
+</nav><!--nav end-->
+
+
+<br><br>
+<!--<nav>-->
+<!--    <div class="nav-wrapper" style="background: #151B54;">-->
+<!--      <a href="#!" class="brand-logo" style="text-decoration: none;"><span style="color: #fff;font-size: larger;font-weight: bold;margin-left: 5px;">Electro-Cart</span></a>-->
+<!--      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
+<!--      <span class="right">   <a href="/my_shopping_cart" class="an navlink"><span style="font-size: 13px;" id="shoppingcart" class="an">(0 Articals) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></span>-->
+
+<!--        <div class="right"><i class="material-icons">shopping_cart</i></div>-->
+<!--        <ul class="right hide-on-med-and-down mainmenu">-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--  <ul class="sidenav mainmenu" id="mobile-demo" >-->
+
+<!--  </ul>-->
+
+<script>
+  $(document).ready(function(){
+<!--    $('.sidenav').sidenav();-->
+    $('.carousel').carousel()
+  });</script>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  	<script src="/static/Electrouserinterface.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <script>
+
+  $(document).ready(function(){
+<!--    $('.sidenav').sidenav();-->
+  });
+    </script>
+
+
+    <title>Electro-Cart</title>
+</head>
+<body>
+{% include 'AppBar1.html' %}
+<br>
+<div class="carousel slide" data-bs-ride="carousel" id="a" style="margin-top: 8px;">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#a" data-bs-slide-to="1" ></button>
+
+  </div>
+  <div class="carousel-inner" >
+    <div class="carousel-item active" data-bs-interval="1900">
+      <div style="width:100%;">
+      <img src="/static/4.jpg" class="d-block w-100" alt="..." style="height: 350px;">
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1900">
+      <div style="width:100%;">
+      <img src="/static/3.jpg" class="d-block w-100" alt="..." style="height: 350px;">
+      </div>
+    </div>
+
+      <div class="carousel-caption d-none d-md-block">
+
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<!--&lt;!&ndash;start slider -&ndash;&gt;-->
+<!--<div class="carousel slide" data-bs-ride="carousel" id="a">-->
+<!--  <div class="carousel-inner">-->
+<!--    <div class="carousel-item active" data-bs-interval="1000">-->
+<!--      <div class="container-fluid">-->
+<!--  <div class="container d-block">-->
+<!--    <div class="row ">-->
+<!--      <div class="col-md-3">-->
+<!--        <img src="st/6.jpg"class="w-100" style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <img src="image/7.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--       <div class="col-md-3">-->
+<!--        <img src=" image/6.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <img src=" image/9.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--    </div>&lt;!&ndash;-row end-&ndash;&gt;-->
+<!--  </div>&lt;!&ndash;container end&ndash;&gt;-->
+<!--</div>&lt;!&ndash;-container-fluid end&ndash;&gt;-->
+<!--    </div>-->
+
+<!--    <div class="carousel-item" data-bs-interval="1000">-->
+<!--     <div class="container-fluid">-->
+<!--  <div class="container">-->
+<!--    <div class="row ">-->
+<!--      <div class="col-md-3">-->
+<!--        <img src="image/6.jpg"class="w-100" style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <img src="image/7.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--       <div class="col-md-3">-->
+<!--        <img src=" image/9.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--      <div class="col-md-3">-->
+<!--        <img src=" image/9.jpg"class="w-100"style="padding:2%;margin-top: 20px;">-->
+<!--      </div>-->
+<!--    </div>&lt;!&ndash;-row end-&ndash;&gt;-->
+<!--  </div>&lt;!&ndash;container end&ndash;&gt;-->
+<!--</div>&lt;!&ndash;-container-fluid end&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--</div>-->
+<!--&lt;!&ndash;end slider&#45;&#45;&ndash;&gt;-->
+<br>
+
+<!-- Sub category -->
+<div id="subcategorylist" style="display: flex;flex-direction: row;">
+
+</div>
+<div style="padding: 5px; display: flex; flex-direction: row; flex-wrap: wrap;" id="productlist">
+
+</div>
+<br>
+{% include 'electroslider.html' %}
+<br>
+
+{% include 'Appfooter1.html' %}
+
+</body>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+<!--    &lt;!&ndash; Compiled and minified JavaScript &ndash;&gt;-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+<script>
+
+  $(document).ready(function(){
+<!--    $('.sidenav').sidenav();-->
+  });
+</script>
+</html>
